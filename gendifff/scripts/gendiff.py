@@ -4,8 +4,8 @@ from gendifff.cli import parse_cli
 
 def main():
     args = parse_cli()
-    # diff = generate_diff(args.first_file, args.second_file)
-    print(generate_diff(args.first_file, args.second_file))
+    diff = generate_diff(args.first_file, args.second_file)
+    print(diff)
 
 
 if __name__ == '__main__':

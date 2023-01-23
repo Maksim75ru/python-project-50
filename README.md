@@ -3,4 +3,4 @@
 
 
 ### Comparing two files:
-[![asciicast](https://asciinema.org/a/xK4bcFSHopVIupmgF8m2zQOdC.svg)](https://asciinema.org/a/xK4bcFSHopVIupmgF8m2zQOdC)
+[![asciicast](https://asciinema.org/a/553571.svg)](https://asciinema.org/a/553571)
