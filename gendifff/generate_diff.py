@@ -1,4 +1,6 @@
 import json
+import yaml
+from yaml.loader import SafeLoader
 
 
 def get_format(value):
@@ -11,9 +13,22 @@ def get_format(value):
     return value
 
 
-def generate_diff(file_path1, file_path2) -> str:
-    file1 = json.load(open(file_path1))
-    file2 = json.load(open(file_path2))
+def get_content(file_path1, file_path2):
+    file1 = file2 = ''
+    if file_path1.endswith('.json') or file_path2.endswith('.json'):
+        file1 = json.load(open(file_path1))
+        file2 = json.load(open(file_path2))
+    if file_path1.endswith('.yaml') or file_path2.endswith('.yaml') \
+            or file_path1.endswith('.yml') or file_path2.endswith('.yml'):
+        file1 = yaml.load(open(file_path1), Loader=SafeLoader)
+        file2 = yaml.load(open(file_path2), Loader=SafeLoader)
+
+    return file1, file2
+
+
+def generate_diff(file_path1: str, file_path2: str) -> str:
+    file1, file2 = get_content(file_path1, file_path2)
+
     file1_sorted = dict(sorted(file1.items(), key=lambda x: x[0]))
     file2_sorted = dict(sorted(file2.items(), key=lambda x: x[0]))
 

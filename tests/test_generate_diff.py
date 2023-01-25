@@ -1,5 +1,4 @@
 import os
-import pytest
 from gendifff import generate_diff
 
 
@@ -20,3 +19,4 @@ plain_data = read(get_fixture_path('plain.txt')).rstrip()
 def test_generate_diff():
     expected = plain_data
     assert generate_diff('source/file1.json', 'source/file2.json') == expected
+    assert generate_diff('source/file1.yml', 'source/file2.yml') == expected
