@@ -5,5 +5,8 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/592b54a1e8930fed3d4e/test_coverage)](https://codeclimate.com/github/Maksim75ru/python-project-50/test_coverage)
 
 
-### Comparing two files:
+### Сравнение двух плоских файлов: JSON.
 [![asciicast](https://asciinema.org/a/553571.svg)](https://asciinema.org/a/553571)
+
+### Сравнение двух плоских файлов: YAML(YML).
+[![asciicast](https://asciinema.org/a/meGpNmMUPLOjAGQJrQGXZSJRW.svg)](https://asciinema.org/a/meGpNmMUPLOjAGQJrQGXZSJRW)
