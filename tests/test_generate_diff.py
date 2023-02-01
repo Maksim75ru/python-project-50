@@ -1,22 +1,22 @@
-import os
-from gendifff import generate_diff
+import pytest
+from gendifff.engine import generate_diff
+
+json_1 = 'tests/fixtures/file1.json'
+json_2 = 'tests/fixtures/file2.json'
+yml_1 = 'tests/fixtures/file1.yml'
+yml_2 = 'tests/fixtures/file2.yml'
+
+stylish_result = 'tests/fixtures/stylish_result'
 
 
-def get_fixture_path(file_name):
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    return os.path.join(current_dir, 'fixtures', file_name)
+formats = ['stylish']
 
 
-def read(file_path):
-    with open(file_path, 'r') as f:
-        result = f.read()
-    return result
+@pytest.mark.parametrize('file1_path, file2_path, format_name, expected', [(json_1, json_2, formats[0], stylish_result),
+                                                                           (yml_1, yml_2, formats[0], stylish_result),
+                                                                           ])
 
 
-plain_data = read(get_fixture_path('plain.txt')).rstrip()
-
-
-def test_generate_diff():
-    expected = plain_data
-    assert generate_diff('source/file1.json', 'source/file2.json') == expected
-    assert generate_diff('source/file1.yml', 'source/file2.yml') == expected
+def test_generate_diff(file1_path, file2_path, format_name, expected):
+    with open(expected) as f:
+        assert generate_diff(file1_path, file2_path, format_name) == f.read()
