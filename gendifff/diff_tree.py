@@ -1,4 +1,4 @@
-def get_diff(tree1: dict, tree2: dict) -> dict:
+def get_diff(tree1: dict, tree2: dict) -> dict:  # noqa: C901
     result = {}
 
     old_keys = set(tree1.keys()) - set(tree2.keys())
