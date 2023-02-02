@@ -7,7 +7,8 @@ def get_string_value(node, depth: int) -> str:
     if not isinstance(node, dict):
         return node
     for k, v in node.items():
-        structure.append(f"\n{indent * depth}  {k}: {get_string_value(v, depth + 2)}")
+        structure.append(f"\n{indent * depth}  {k}: "
+                         f"{get_string_value(v, depth + 2)}")
     structure.append(f'\n{indent * (depth - 1)}}}')
     return ''.join(structure)
 

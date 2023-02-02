@@ -14,13 +14,15 @@ def get_diff(tree1: dict, tree2: dict) -> dict:
         new_val = tree2.get(key, 'not_exists')
 
         if isinstance(old_val, dict) and isinstance(new_val, dict):
-            result[key] = {'status': 'nested', 'value': get_diff(old_val, new_val)}
+            result[key] = \
+                {'status': 'nested', 'value': get_diff(old_val, new_val)}
         elif old_val == new_val:
             result[key] = {'status': 'unchanged', 'value': old_val}
         elif old_val != new_val:
             if old_val == 'not_exists':
                 result[key] = {'status': 'added', 'value': new_val}
             else:
-                result[key] = {'status': 'changed', 'old_value': old_val, 'new_value': new_val}
+                result[key] = {'status': 'changed',
+                               'old_value': old_val, 'new_value': new_val}
 
     return dict(sorted(result.items()))
