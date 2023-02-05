@@ -13,3 +13,6 @@
 
 ### Сравнение двух плоских файлов: YAML(YML) и JSON.
 [![asciicast](https://asciinema.org/a/UatoLduzjfxktaMjHYP5YOF0I.svg)](https://asciinema.org/a/UatoLduzjfxktaMjHYP5YOF0I)
+
+### Сравнение двух файлов с выводом в формате plain: YAML(YML).
+[![asciicast](https://asciinema.org/a/nToo7lrza3mA4Z7i4kWrG5AVO.svg)](https://asciinema.org/a/nToo7lrza3mA4Z7i4kWrG5AVO)

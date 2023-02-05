@@ -7,13 +7,16 @@ yml_1 = 'tests/fixtures/file1.yml'
 yml_2 = 'tests/fixtures/file2.yml'
 
 stylish_result = 'tests/fixtures/stylish_result'
+plain_result = 'tests/fixtures/plain_result'
 
 
-formats = ['stylish']
+formats = ['stylish', 'plain']
 
 
 @pytest.mark.parametrize('file1_path, file2_path, format_name, expected', [(json_1, json_2, formats[0], stylish_result),
                                                                            (yml_1, yml_2, formats[0], stylish_result),
+                                                                           (yml_1, yml_2, formats[1], plain_result),
+                                                                           (yml_1, yml_2, formats[1], plain_result),
                                                                            ])
 
 
