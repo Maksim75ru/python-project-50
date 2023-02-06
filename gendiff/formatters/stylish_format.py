@@ -1,4 +1,4 @@
-from gendifff.formatters.normalize_data import normalize_values
+from gendiff.formatters.normalize_data import normalize_values
 
 
 def get_string_value(node, depth: int) -> str:

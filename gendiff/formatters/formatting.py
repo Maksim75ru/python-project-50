@@ -1,4 +1,4 @@
-from gendifff.formatters import stylish_format, plain_format, json_format
+from gendiff.formatters import stylish_format, plain_format, json_format
 
 
 FORMATTERS = {

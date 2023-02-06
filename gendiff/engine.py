@@ -1,6 +1,6 @@
-from gendifff.parser import get_content
-from gendifff.diff_tree import get_diff
-from gendifff.formatters.formatting import formatting
+from gendiff.parser import get_content
+from gendiff.diff_tree import get_diff
+from gendiff.formatters.formatting import formatting
 import os
 
 
