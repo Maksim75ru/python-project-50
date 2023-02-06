@@ -22,7 +22,6 @@ formats = ['stylish', 'plain', 'json']
                                                                            (yml_1, yml_2, formats[2], json_result),
                                                                            ])
 
-
 def test_generate_diff(file1_path, file2_path, format_name, expected):
     with open(expected) as f:
         assert generate_diff(file1_path, file2_path, format_name) == f.read()
