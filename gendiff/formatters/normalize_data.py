@@ -3,8 +3,8 @@ def normalize_values(data: dict) -> dict:
         None: 'null',
         False: 'false',
         True: 'true',
-        '': 'null',
-        ' ': 'null'
+        # '': 'null',
+        # ' ': 'null'
     }
 
     if isinstance(data, dict):
