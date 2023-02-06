@@ -5,7 +5,7 @@ test:
 	poetry run pytest -vv
 
 test-coverage:
-	poetry run pytest --cov=gendifff --cov-report xml
+	poetry run pytest --cov=gendiff --cov-report xml
 
 lint:
 	poetry run flake8 gendiff
