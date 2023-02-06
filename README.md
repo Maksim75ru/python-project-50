@@ -16,3 +16,6 @@
 
 ### Сравнение двух файлов с выводом в формате plain: YAML(YML).
 [![asciicast](https://asciinema.org/a/nToo7lrza3mA4Z7i4kWrG5AVO.svg)](https://asciinema.org/a/nToo7lrza3mA4Z7i4kWrG5AVO)
+
+### Сравнение двух файлов с выводом в формате JSON.
+[![asciicast](https://asciinema.org/a/rr8dnO2b3LmgoXdYO0ssvsVEN.svg)](https://asciinema.org/a/rr8dnO2b3LmgoXdYO0ssvsVEN)
