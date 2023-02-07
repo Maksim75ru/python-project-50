@@ -1,10 +1,19 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "This scripts shows you differences between two files in .json and .yml formats"
 authors = ["Maksim Lesnikov <maximborzya75@gmail.com>"]
 readme = "README.md"
 packages = [{include = "gendiff"}]
+classifiers = [
+    'Development Status :: 4 - Beta',
+    'Topic :: Software Development :: Show differences',
+    'Intended Audience :: Developers',
+    'Operating System :: MacOS :: MacOS X',
+    'Operating System :: Microsoft :: Windows',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
