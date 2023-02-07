@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "gendiff"}]
 classifiers = [
     'Development Status :: 4 - Beta',
-    'Topic :: Software Development :: Show differences',
+    'Software Development :: Show differences',
     'Intended Audience :: Developers',
     'Operating System :: MacOS :: MacOS X',
     'Operating System :: Microsoft :: Windows',
