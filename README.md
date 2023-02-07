@@ -1,8 +1,15 @@
+## Вычислитель отличий
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Maksim75ru/python-project-50/workflows/hexlet-check/badge.svg)](https://github.com/Maksim75ru/python-project-50/actions)
 [![Python CI](https://github.com/Maksim75ru/python-project-50/actions/workflows/Python_CI_4_step.yml/badge.svg)](https://github.com/Maksim75ru/python-project-50/actions/workflows/Python_CI_4_step.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/592b54a1e8930fed3d4e/maintainability)](https://codeclimate.com/github/Maksim75ru/python-project-50/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/592b54a1e8930fed3d4e/test_coverage)](https://codeclimate.com/github/Maksim75ru/python-project-50/test_coverage)
+
+#### Данный скрипт находит различия между двумя плоскими (только пары ключ-значение) файлами в формате .json и .yml(yaml). Вывод различий может быть представлен в 3 вариантах, в том числе .json.
+
+#### To install this project you need: 
++ python-versions = ">=3.6"
++ poetry-version = ">=1.2.2"
 
 
 ### Сравнение двух плоских файлов: JSON.
