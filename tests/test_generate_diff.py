@@ -1,5 +1,6 @@
 import pytest
 from gendiff.engine import generate_diff
+from gendiff.scripts.gendiff import main
 
 json_1 = 'tests/fixtures/file1.json'
 json_2 = 'tests/fixtures/file2.json'
@@ -24,3 +25,18 @@ formats = ['stylish', 'plain', 'json']
 def test_generate_diff(file1_path, file2_path, format_name, expected):
     with open(expected) as f:
         assert generate_diff(file1_path, file2_path, format_name) == f.read()
+
+
+def test_main_even_simpler(capsys):
+    with open(json_result) as f:
+        main([json_1, json_2, "-f", "json"])
+        captured = capsys.readouterr()
+        assert captured.out == f.read() + '\n'
+    with open(plain_result) as f:
+        main([json_1, json_2, "-f", "plain"])
+        captured = capsys.readouterr()
+        assert captured.out == f.read() + '\n'
+    with open(stylish_result) as f:
+        main([json_1, json_2, "-f", "stylish"])
+        captured = capsys.readouterr()
+        assert captured.out == f.read() + '\n'
