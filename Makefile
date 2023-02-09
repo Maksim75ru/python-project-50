@@ -10,6 +10,9 @@ test-coverage:
 lint:
 	poetry run flake8 gendiff
 
+package-install:
+	python3 -m pip install --force-reinstall --user dist/*.whl
+
 selfcheck:
 	poetry check
 
