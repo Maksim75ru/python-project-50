@@ -11,7 +11,7 @@ lint:
 	poetry run flake8 gendiff
 
 package-install:
-	python3 -m pip install --force-reinstall --user dist/*.whl
+	python3 -m pip install --user --force-reinstall dist/*.whl
 
 selfcheck:
 	poetry check
