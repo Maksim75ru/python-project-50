@@ -9,7 +9,7 @@ def get_complex_value(value):
     return f"'{value}'"
 
 
-def get_stylish(diff: dict, keys=None) -> str:  # noqa: C901
+def get_plain(diff: dict, keys=None) -> str:  # noqa: C901
     lines = []
     parents = ''
     output_msg = {
@@ -25,7 +25,7 @@ def get_stylish(diff: dict, keys=None) -> str:  # noqa: C901
         status = value['status']
 
         if status == 'nested':
-            lines.append(f"{get_stylish(value.get('value'), parents + key)}")
+            lines.append(f"{get_plain(value.get('value'), parents + key)}")
         else:
             if status == 'changed':
                 old_val = get_complex_value(value.get('old_value'))
@@ -47,4 +47,4 @@ def get_stylish(diff: dict, keys=None) -> str:  # noqa: C901
 
 def get_diff_format(diff: dict) -> str:
     diff = normalize_values(diff)
-    return get_stylish(diff)
+    return get_plain(diff)
