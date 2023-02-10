@@ -5,10 +5,9 @@ def normalize_values(data: dict) -> dict:
         True: 'true',
     }
 
-    if isinstance(data, dict):
-        for key, value in data.items():
-            if isinstance(value, dict):
-                normalize_values(value)
-            elif isinstance(value, (bool, type(None))):
-                data[key] = correct_values[value]
+    for key, value in data.items():
+        if isinstance(value, dict):
+            normalize_values(value)
+        elif isinstance(value, (bool, type(None))):
+            data[key] = correct_values[value]
     return data
