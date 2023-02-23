@@ -7,10 +7,16 @@
 
 #### Данный скрипт находит различия между двумя плоскими (только пары ключ-значение) файлами в формате .json и .yml(yaml). Вывод различий может быть представлен в 3 вариантах, в том числе .json.
 
-#### To install this project you need: 
+#### Предварительные требования: 
 + python-versions = ">=3.6"
 + poetry-version = ">=1.2.2"
 
+#### Локальная установка:
+`python3 -m pip install --user git+https://github.com/Maksim75ru/python-project-49.git`
+
+```sh
+make .PHONY # первоначальная установка и запуск тестов
+```
 
 ### Сравнение двух плоских файлов: JSON.
 [![asciicast](https://asciinema.org/a/553571.svg)](https://asciinema.org/a/553571)
