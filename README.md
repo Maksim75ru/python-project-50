@@ -12,7 +12,7 @@
 + poetry-version = ">=1.2.2"
 
 #### Локальная установка:
-`python3 -m pip install --user git+https://github.com/Maksim75ru/python-project-49.git`
+`python3 -m pip install --user git+https://github.com/Maksim75ru/python-project-50.git`
 
 ```sh
 make .PHONY # первоначальная установка и запуск тестов
